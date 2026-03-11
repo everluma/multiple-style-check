@@ -1,3 +1,34 @@
-function changeTheme(theme) {
-    document.getElementById("theme").href = theme;
-}
+// function changeTheme(theme, btn) {
+//     // theme change
+//     document.getElementById("theme").href = theme;
+
+//     // remove active class from all buttons
+//     const buttons = document.querySelectorAll('.btn');
+//     buttons.forEach(b => b.classList.remove('active'));
+
+//     // add active class to the clicked button
+//     btn.classList.add('active');
+// }
+
+
+ window.addEventListener('DOMContentLoaded', () => {
+        // Default theme
+        document.getElementById("theme").href = "classic.css";
+
+        // সব button থেকে active remove করে Classic এ add
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-classic').classList.add('active');
+    });
+
+    function changeTheme(theme, btn) {
+        // theme change
+        document.getElementById("theme").href = theme;
+
+        // remove active from all buttons
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(b => b.classList.remove('active'));
+
+        // add active to clicked button
+        btn.classList.add('active');
+    }

@@ -74,6 +74,9 @@ body {
 
 .btn:active {
     transform: scale(0.95);
+    background: linear-gradient(45deg, #8ec5fc, #56ab2f); /* same as navbar/footer */
+    color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 .paragraph-div {
@@ -212,22 +215,3 @@ footer {
     }
 }
 
-/* Make sidebar and paragraph same height using flex on larger screens */
-@media (min-width: 1025px) {
-    .body-page {
-        display: flex;
-        align-items: flex-start; /* ensures top alignment */
-    }
-
-    .btn-div {
-        flex: 0 0 220px;
-    }
-
-    .paragraph-div {
-        flex: 1;
-    }
-
-    .side-bar {
-        flex: 0 0 280px;
-    }
-}
