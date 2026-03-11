@@ -1,0 +1,216 @@
+/* dark.css - polished, sleek, professional dark theme */
+
+body {
+    background: #121212; /* deep dark background */
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.whole-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    margin-bottom:20px;
+}
+
+.navbar h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.navbar p {
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+/* Buttons */
+.btn-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    background: #2c3e50;
+    color: #ecf0f1;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #34495e;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Paragraph / Main Content */
+.paragraph-div {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 20px 60px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.paragraph-div h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+.paragraph-div p {
+    font-size: 16px;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+}
+
+.paragraph-div h3 {
+    font-size: 22px;
+    margin-top: 50px;
+    color: #f5f5f5;
+}
+
+/* Sidebar */
+.side-bar {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    border-right: 3px solid #2980b9;
+    box-shadow: -5px 10px 15px rgba(0,0,0,0.5);
+}
+
+.side-bar h3 {
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+
+.quick-info p {
+    line-height: 1.6;
+    color: #dcdcdc;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+    padding: 20px;
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+/* Responsive */
+/* Universal Responsive Fixes */
+
+/* Make body-page grid flexible on small screens */
+@media (max-width: 1024px) {
+    .body-page {
+        grid-template-columns: 1fr; /* single column on tablets and smaller */
+        gap: 20px;
+    }
+
+    .btn-div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn {
+        flex: 1 1 45%; /* responsive button width */
+        min-width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .paragraph-div, .side-bar {
+        width: 100%;
+    }
+}
+
+/* Extra small screens - mobile phones */
+@media (max-width: 600px) {
+    .navbar h1 {
+        font-size: 28px; /* smaller title */
+        text-align: center;
+    }
+
+    .navbar p {
+        font-size: 14px;
+    }
+
+    .paragraph-div h2 {
+        font-size: 22px;
+    }
+
+    .paragraph-div h3 {
+        font-size: 18px;
+    }
+
+    .paragraph-div p,
+    .side-bar p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .side-bar {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+/* Make sidebar and paragraph same height using flex on larger screens */
+@media (min-width: 1025px) {
+    .body-page {
+        display: flex;
+        align-items: flex-start; /* ensures top alignment */
+    }
+
+    .btn-div {
+        flex: 0 0 220px;
+    }
+
+    .paragraph-div {
+        flex: 1;
+    }
+
+    .side-bar {
+        flex: 0 0 280px;
+    }
+}

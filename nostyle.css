@@ -1,0 +1,4 @@
+/* nostyle.css - No styling */
+body, .navbar, .btn, .paragraph-div, .side-bar, footer {
+    all: unset;
+}

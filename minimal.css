@@ -1,0 +1,181 @@
+/* minimal.css - clean, elegant, portfolio-ready design */
+
+body {
+    background: #fafafa;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.whole-page {
+    max-width: 1100px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    color: #111;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    border-radius: 12px 12px 0 0;
+}
+
+.navbar h1 {
+    font-size: 44px;
+    margin-bottom: 8px;
+}
+
+.navbar p {
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.btn-div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 12px;
+    border: 2px solid #111;
+    background: transparent;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #111;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Paragraph */
+.paragraph-div {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #eee;
+}
+
+/* Sidebar */
+.side-bar {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 2px solid #ccc;
+}
+
+.side-bar h3 {
+    margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+    background: #fff;
+    color: #111;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Responsive */
+/* Universal Responsive Fixes */
+
+/* Make body-page grid flexible on small screens */
+@media (max-width: 1024px) {
+    .body-page {
+        grid-template-columns: 1fr; /* single column on tablets and smaller */
+        gap: 20px;
+    }
+
+    .btn-div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn {
+        flex: 1 1 45%; /* responsive button width */
+        min-width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .paragraph-div, .side-bar {
+        width: 100%;
+    }
+}
+
+/* Extra small screens - mobile phones */
+@media (max-width: 600px) {
+    .navbar h1 {
+        font-size: 28px; /* smaller title */
+        text-align: center;
+    }
+
+    .navbar p {
+        font-size: 14px;
+    }
+
+    .paragraph-div h2 {
+        font-size: 22px;
+    }
+
+    .paragraph-div h3 {
+        font-size: 18px;
+    }
+
+    .paragraph-div p,
+    .side-bar p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .side-bar {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+/* Make sidebar and paragraph same height using flex on larger screens */
+@media (min-width: 1025px) {
+    .body-page {
+        display: flex;
+        align-items: flex-start; /* ensures top alignment */
+    }
+
+    .btn-div {
+        flex: 0 0 220px;
+    }
+
+    .paragraph-div {
+        flex: 1;
+    }
+
+    .side-bar {
+        flex: 0 0 280px;
+    }
+}

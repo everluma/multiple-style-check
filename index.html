@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Website, Multiple Styles</title>
+
+    <link id="theme" rel="stylesheet" href="classic.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="whole-page">
+
+        <nav class="navbar">
+            <h1>Welcome to my Homepage</h1>
+            <p>
+                This website demonstrates how the same page can appear
+                in different styles using multiple CSS stylesheets.
+            </p>
+        </nav>
+
+
+        <div class="body-page">
+
+            <div class="btn-div">
+
+                <button class="btn" onclick="changeTheme('classic.css')">Classic Style</button>
+
+                <button class="btn" onclick="changeTheme('modern.css')">Modern Style</button>
+                
+                <button class="btn" onclick="changeTheme('dark.css')">Dark Mode</button>
+                
+                <button class="btn" onclick="changeTheme('minimal.css')">Minimal Style</button>
+
+                <button class="btn" onclick="changeTheme('nostyle.css')">No Style</button>
+
+            </div>
+
+            <div class="paragraph-div">
+                <h2>Learn Web Development</h2>
+
+                <p>Web development is the process of creating websites and web applications. It includes technologies like HTML, CSS and JavaScripts. <br>
+                Front-end developers design how websites look and interact with users, while back-end developers handle the logic and data behind the scenes.</p>
+                <div class="link">
+                    <a href=""><button class="btn" onclick="changeTheme('classic.css')">
+                        Preview Classic Style
+                    </button></a>
+
+                    <a href=""><button class="btn" onclick="changeTheme('modern.css')">
+                        Preview Modern Style
+                    </button></a>
+
+                    <a href=""><button class="btn" onclick="changeTheme('dark.css')">
+                        Preview Dark Mode
+                    </button></a>
+
+                    <a href=""><button class="btn" onclick="changeTheme('minimal.css')">
+                        Preview Minimal Style
+                    </button></a>
+                </div>
+
+                <h3> No Style</h3>
+                <p>
+                    This page can also be viewed without any stylesheet.
+                    When no CSS is applied, the page shows only the basic structure created by HTML.
+                    This helps us understand how important CSS is for designing and styling a website.
+                
+                    HTML provides the structure of the page, while CSS controls the appearance,
+                    layout, colors, spacing and overall visual design. Without CSS, websites look
+                    very simple and plain, but the content is still readable.
+                </p>
+
+                <a href=""><button class="btn" onclick="changeTheme('nostyle.css')">No Stylesheet</button></a>
+            </div>
+
+            <div class="side-bar">
+                <div class="quick-info">
+                    <h3>Quick Info </h3>
+                    
+                    <p><strong>✅html -</strong> Hyper Text MarkUp Language.</p>
+                    <p><strong>✅CSS -</strong> Cascading Style Sheet.</p>
+                    <p><strong>✅JavaScript -</strong> It is a Programming Language. </p>
+                </div>
+
+                <h3>Web Development Basic</h3>
+                <p>HTML creates the structure of a website. <br>
+                CSS is used to design and style the layout</p><br>
+                <p>JavaScript adds interactivity and dynamic behavior. <br><br>
+                
+                Together these technologies build modern websites and web applications.</p>
+            </div>
+        </div>
+
+
+        <footer>
+            <p>
+                This demo website shows how a single HTML page can be styled in
+                different ways using various CSS stylesheets.
+            
+                The goal of this project is to demonstrate the power of CSS
+                in transforming the visual appearance of a webpage.
+            
+                Created for learning and demonstration purposes.
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="./index.js"></script>
+    
+    
+</body>
+</html>
