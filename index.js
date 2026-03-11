@@ -12,23 +12,20 @@
 
 
  window.addEventListener('DOMContentLoaded', () => {
-        // Default theme
-        document.getElementById("theme").href = "classic.css";
+    // Default theme
+    document.getElementById("theme").href = "classic.css";
 
-        // সব button থেকে active remove করে Classic এ add
-        const buttons = document.querySelectorAll('.btn');
-        buttons.forEach(b => b.classList.remove('active'));
-        document.getElementById('btn-classic').classList.add('active');
-    });
+    // Active button set
+    document.getElementById('btn-classic').classList.add('active');
+});
 
-    function changeTheme(theme, btn) {
-        // theme change
-        document.getElementById("theme").href = theme;
+function changeTheme(theme, btn) {
+    document.getElementById("theme").href = theme;
 
-        // remove active from all buttons
-        const buttons = document.querySelectorAll('.btn');
-        buttons.forEach(b => b.classList.remove('active'));
+    // Remove active from all buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(b => b.classList.remove('active'));
 
-        // add active to clicked button
-        btn.classList.add('active');
-    }
+    // Add active to clicked button
+    btn.classList.add('active');
+}

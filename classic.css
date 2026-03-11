@@ -72,11 +72,18 @@ body {
    
 }
 
+
 .btn:active {
     transform: scale(0.95);
-    background: linear-gradient(45deg, #8ec5fc, #56ab2f); /* same as navbar/footer */
+    background:linear-gradient(20deg, green, #56ab2f, rgb(24, 187, 24), #56ab2f, green);
+    color: white; /* same as navbar/footer */
     color: white;
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.btn.active:hover {
+    background: linear-gradient(20deg, green, #56ab2f, rgb(24, 187, 24), #56ab2f, green);
+    color: white;
 }
 
 .paragraph-div {
